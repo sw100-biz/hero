@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/wanted-design-system-019e012c-ddde-7919-8039-b806627a851a/colors_and_type.css">
+<style>
+html,body{margin:0;padding:0}
+body{background:#eef1f6;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:#0066FF;text-decoration:none}
+a:hover{color:#0044CC}
+::selection{background:rgba(0,102,255,.14)}
+@keyframes dcFloatA{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(18px,-46px,0) scale(1.04)}}
+@keyframes dcFloatB{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-26px,38px,0) scale(.97)}}
+@keyframes dcFloatC{0%,100%{transform:translate3d(0,0,0)}33%{transform:translate3d(30px,26px,0)}66%{transform:translate3d(-14px,-30px,0)}}
+@keyframes dcFloatD{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-34px,-24px,0) scale(1.06)}}
+@keyframes dcRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes dcLbIn{from{opacity:0;transform:scale(.972)}to{opacity:1;transform:none}}
+@keyframes dcVeil{from{opacity:0}to{opacity:1}}
+</style>
+</helmet>
+
+<div style="position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:linear-gradient(168deg,#fbfcfe 0%,#eef1f6 46%,#e4e9f1 100%)">
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 80% at 78% 4%,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 55%)"></div>
+  <sc-if value="{{ spheresOn }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="position:absolute;top:-8vh;left:58vw;width:44vw;height:44vw;max-width:640px;max-height:640px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(224,233,246,.55) 42%,rgba(178,198,226,.32) 72%,rgba(150,175,212,.16));box-shadow:0 60px 120px -40px rgba(80,105,150,.28),inset -18px -22px 60px rgba(255,255,255,.7);filter:blur(.4px);animation:dcFloatA 26s ease-in-out infinite"></div>
+      <div style="position:absolute;top:46vh;left:-9vw;width:32vw;height:32vw;max-width:430px;max-height:430px;border-radius:50%;background:radial-gradient(circle at 36% 30%,rgba(255,255,255,.9),rgba(228,236,248,.5) 46%,rgba(186,203,229,.26) 78%);box-shadow:0 50px 90px -36px rgba(80,105,150,.24),inset -14px -18px 44px rgba(255,255,255,.65);filter:blur(1px);animation:dcFloatB 34s ease-in-out infinite"></div>
+      <div style="position:absolute;top:118vh;left:66vw;width:26vw;height:26vw;max-width:340px;max-height:340px;border-radius:50%;background:radial-gradient(circle at 30% 26%,rgba(255,255,255,.92),rgba(222,231,245,.48) 45%,rgba(170,192,224,.24) 80%);box-shadow:0 40px 80px -32px rgba(80,105,150,.22),inset -12px -14px 40px rgba(255,255,255,.6);filter:blur(1.5px);animation:dcFloatC 42s ease-in-out infinite"></div>
+      <div style="position:absolute;top:96vh;left:8vw;width:14vw;height:14vw;max-width:180px;max-height:180px;border-radius:50%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.95),rgba(230,238,250,.44) 50%,rgba(176,196,226,.2) 82%);box-shadow:0 26px 54px -24px rgba(80,105,150,.2),inset -8px -10px 26px rgba(255,255,255,.6);animation:dcFloatD 22s ease-in-out infinite"></div>
+      <div style="position:absolute;top:24vh;left:30vw;width:9vw;height:9vw;max-width:120px;max-height:120px;border-radius:50%;background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.9),rgba(226,235,248,.4) 52%,rgba(180,200,228,.16) 84%);box-shadow:inset -6px -8px 20px rgba(255,255,255,.6);filter:blur(2px);animation:dcFloatC 30s ease-in-out infinite reverse"></div>
+      <div style="position:absolute;top:150vh;left:34vw;width:20vw;height:20vw;max-width:260px;max-height:260px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.9),rgba(224,233,246,.42) 48%,rgba(172,193,224,.2) 80%);box-shadow:0 34px 70px -30px rgba(80,105,150,.2),inset -10px -12px 32px rgba(255,255,255,.6);filter:blur(1.2px);animation:dcFloatB 38s ease-in-out infinite reverse"></div>
+    </div>
+  </sc-if>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,249,252,.55) 0%,rgba(247,249,252,.2) 30%,rgba(247,249,252,.5) 100%)"></div>
+</div>
+
+<div style="position:relative;z-index:1;min-height:100vh;font-family:var(--font-sans);color:#171719">
+
+  <header style="max-width:1400px;margin:0 auto;padding:clamp(56px,9vw,132px) clamp(20px,5vw,80px) clamp(28px,4vw,56px)">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(28px,5vw,64px)">
+      <span style="width:7px;height:7px;border-radius:50%;background:{{ accent }}"></span>
+      <span style="font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(55,56,60,.61)">Design Proposal</span>
+      <span style="flex:1;height:1px;background:rgba(112,115,124,.22)"></span>
+      <span style="font-size:11px;font-weight:500;letter-spacing:.14em;color:rgba(55,56,60,.45)">2026 · V4</span>
+    </div>
+    <h1 style="margin:0;font-size:clamp(40px,7.4vw,104px);line-height:1.02;letter-spacing:-.035em;font-weight:700;max-width:16ch">HERO 도매사 포털<br><span style="font-weight:300;color:rgba(55,56,60,.55)">UI 디자인 시안</span></h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px 40px;margin-top:clamp(36px,5vw,72px);padding-top:26px;border-top:1px solid rgba(112,115,124,.22)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(55,56,60,.45)">Client</span>
+        <span style="font-size:15px;font-weight:500">하이트진로</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(55,56,60,.45)">Studio</span>
+        <span style="font-size:15px;font-weight:500">비즈데이터</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(55,56,60,.45)">Scope</span>
+        <span style="font-size:15px;font-weight:500">6개 방향 · 총 {{ totalCount }}종</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(55,56,60,.45)">Review</span>
+        <span style="font-size:15px;font-weight:500">2026. 07. 27</span>
+      </div>
+    </div>
+    <p style="margin:clamp(32px,4vw,52px) 0 0;max-width:52ch;font-size:clamp(15px,1.3vw,17px);line-height:1.72;color:rgba(55,56,60,.61)">각 탭은 하나의 디자인 방향을 담고 있습니다. 썸네일을 클릭하면 원본 크기로 확대되며, 좌우 화살표 또는 키보드 ← → 로 화면을 넘겨 볼 수 있습니다.</p>
+  </header>
+
+  
+
+  <nav style="position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(247,249,252,.78);border-top:1px solid rgba(112,115,124,.16);border-bottom:1px solid rgba(112,115,124,.16)">
+    <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,5vw,80px);overflow-x:auto">
+      <div style="display:flex;align-items:stretch;gap:clamp(18px,2.4vw,38px);min-width:max-content">
+        <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="6">
+          <button type="button" onClick="{{ tab.onSelect }}" style="{{ tab.btnStyle }}">
+            <span style="{{ tab.numStyle }}">{{ tab.no }}</span>
+            <span style="{{ tab.dotStyle }}"></span>
+            <span style="{{ tab.labelStyle }}">{{ tab.label }}</span>
+            <span style="{{ tab.countStyle }}">{{ tab.count }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </nav><main style="max-width:1400px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(20px,5vw,80px) clamp(80px,10vw,160px)">
+    <div style="{{ paneStyle }}">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px;padding-bottom:clamp(24px,3vw,40px);border-bottom:1px solid rgba(112,115,124,.22)">
+        <div style="max-width:56ch">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <span style="font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.14em;color:rgba(55,56,60,.45)">{{ current.no }}</span>
+            <sc-if value="{{ current.star }}" hint-placeholder-val="{{ false }}">
+              <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(0,102,255,.07);color:{{ accent }};font-size:11px;font-weight:600;letter-spacing:.06em">추천 방향</span>
+            </sc-if>
+          </div>
+          <h2 style="margin:0;font-size:clamp(26px,3.4vw,44px);line-height:1.18;letter-spacing:-.03em;font-weight:600">{{ current.label }}</h2>
+          <p style="margin:16px 0 0;font-size:clamp(14px,1.15vw,16px);line-height:1.7;color:rgba(55,56,60,.61)">{{ current.desc }}</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <span style="font-size:clamp(34px,4vw,56px);font-weight:300;letter-spacing:-.04em;line-height:1">{{ current.count }}</span>
+          <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(55,56,60,.45)">Screens</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:{{ gridCols }};gap:clamp(28px,3.4vw,56px) clamp(24px,2.6vw,44px);align-items:start;margin-top:clamp(36px,4.5vw,64px)">
+        <sc-for list="{{ items }}" as="it" hint-placeholder-count="6">
+          <figure style="{{ it.cardStyle }}" onClick="{{ it.onOpen }}" onMouseEnter="{{ it.onEnter }}" onMouseLeave="{{ it.onLeave }}">
+            <div style="{{ it.mediaStyle }}">
+              <img src="{{ it.src }}" alt="{{ it.title }}" loading="lazy" style="{{ it.imgStyle }}">
+              <div style="{{ it.hoverStyle }}">
+                <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(23,23,25,.82);color:#fff;font-size:12px;font-weight:500;letter-spacing:.02em;backdrop-filter:blur(6px)">원본 크기로 보기</span>
+              </div>
+            </div>
+            <figcaption style="padding:18px 2px 0">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span style="font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(55,56,60,.4);min-width:22px">{{ it.num }}</span>
+                <span style="{{ it.titleStyle }}">{{ it.title }}</span>
+                <sc-if value="{{ it.hasTag }}" hint-placeholder-val="{{ false }}">
+                  <span style="{{ it.tagStyle }}">{{ it.tag }}</span>
+                </sc-if>
+                <span style="font-family:var(--font-mono);font-size:11px;color:rgba(55,56,60,.35)">{{ it.dims }}</span>
+              </div>
+              <sc-if value="{{ it.hasNote }}" hint-placeholder-val="{{ false }}">
+                <p style="{{ it.noteStyle }}">{{ it.note }}</p>
+              </sc-if>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(64px,9vw,140px);padding-top:28px;border-top:1px solid rgba(112,115,124,.22);font-size:12px;color:rgba(55,56,60,.45)">
+      <span>HERO 도매사 포털 · UI 디자인 시안 리뷰</span>
+      <span>하이트진로 + 비즈데이터</span>
+    </div>
+  </main>
+</div>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;background:rgba(18,22,30,.86);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);animation:dcVeil .22s ease-out">
+    <div style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(16px,2.2vw,28px) clamp(18px,3vw,40px);color:rgba(255,255,255,.72)">
+      <div style="display:flex;align-items:baseline;gap:14px;min-width:0">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45)">{{ current.label }}</span>
+        <span style="font-size:14px;font-weight:500;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ lbTitle }}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <span style="font-family:var(--font-mono);font-size:13px;letter-spacing:.06em;color:rgba(255,255,255,.7)">{{ lbCounter }}</span>
+        <button type="button" onClick="{{ closeLightbox }}" aria-label="닫기" style="width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;border-radius:50%;cursor:pointer;font-size:16px;line-height:1;transition:all .2s cubic-bezier(.4,0,.2,1)" style-hover="background:rgba(255,255,255,.16)">✕</button>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,28px);padding:0 clamp(12px,2.4vw,32px) clamp(20px,3vw,40px)">
+      <button type="button" onClick="{{ prev }}" aria-label="이전" style="flex:none;width:clamp(40px,4vw,52px);height:clamp(40px,4vw,52px);display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;border-radius:50%;cursor:pointer;font-size:17px;transition:all .2s cubic-bezier(.4,0,.2,1)" style-hover="background:rgba(255,255,255,.18)">‹</button>
+      <img src="{{ lbSrc }}" alt="{{ lbTitle }}" onClick="{{ stop }}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 40px 120px -30px rgba(0,0,0,.7);background:#fff;animation:dcLbIn .28s cubic-bezier(.4,0,.2,1)">
+      <button type="button" onClick="{{ next }}" aria-label="다음" style="flex:none;width:clamp(40px,4vw,52px);height:clamp(40px,4vw,52px);display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;border-radius:50%;cursor:pointer;font-size:17px;transition:all .2s cubic-bezier(.4,0,.2,1)" style-hover="background:rgba(255,255,255,.18)">›</button>
+    </div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#0066FF&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#0066FF&quot;,&quot;#171719&quot;,&quot;#00875A&quot;,&quot;#1F3A5F&quot;],&quot;section&quot;:&quot;스타일&quot;},&quot;columns&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2,&quot;min&quot;:1,&quot;max&quot;:3,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;레이아웃&quot;},&quot;showSpheres&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;스타일&quot;}}">
+const DIR = 'uploads/draft_web/';
+const F = n => DIR + encodeURIComponent(n);
+const W = { r16: '16 / 9', tab: '5 / 8' };
+
+const TABS = [
+  { id: 'final', no: '01', label: '피드백 적용안', star: true,
+    desc: '리뷰 피드백을 반영한 최종 제안 방향입니다. 화이트 사이드바와 블루 액센트로 정보 위계를 정리하고, 필터·테이블 영역의 밀도와 간격을 재조정했습니다.',
+    files: ['draft_ last1_1.png','draft_ last1_2.png','draft_ last2_1.png','draft_ last2_2.png','draft_ last3_2.png','draft_ last3_1.png'],
+    titles: ['Concept 01.1','Concept 01.2','Concept 02.1','Concept 02.2','Concept 03.1','Concept 03.2\n'],
+    roles: ['main','sub','main','sub','main','sub'],
+    tags: ['Main','01의 서브','Main','03의 서브','Main','05의 서브'],
+    notes: [
+      '기존 ERP 시스템보다 경쾌하고 밝은 느낌을 목표로 정리한 기준 화면입니다. 화이트 사이드바와 블루 액센트로 무게를 덜어내고, 조회 조건 영역을 카드로 묶어 시선의 출발점을 명확히 했습니다.',
+      '01과 같은 톤을 유지한 서브 화면입니다. 기존 ERP의 답답한 인상 대신 밝고 경쾌한 흐름이 이어지도록 여백과 구분선 두께를 동일하게 맞췄습니다.',
+      '테이블 가독성에 초점을 둔 화면입니다. 행 높이와 열 정렬 규칙을 통일하고, 상태·코드처럼 성격이 다른 값에만 색을 써서 스캔 속도를 높였습니다.',
+      '03의 서브 화면으로, 조회 조건이 늘어난 상태를 보여줍니다. 필터가 접히고 펼쳐져도 테이블 시작 위치가 흔들리지 않도록 구성했습니다.',
+      '목록이 길어질 때를 가정한 화면입니다. 스크롤 영역과 하단 고정 영역(검색·엑셀 다운로드·행 수)의 관계를 정리해 작업 중 위치를 잃지 않도록 했습니다.',
+      '앞 화면의 서브로, 작업 밀도가 높은 상태를 보여줍니다. 상단 탭·브레드크럼·액션 버튼의 위치를 고정해 여러 업무를 오갈 때 학습 비용이 생기지 않도록 했습니다.'
+    ] },
+  { id: 'a', no: '02', label: 'Concept A',
+    desc: '딥 그린 사이드바와 그린 액센트를 사용한 방향. 헤더 탭과 브레드크럼을 함께 노출해 현재 위치를 명확히 전달합니다.',
+    files: ['draft_ a1_1.png','draft_ a1_1_1.png','draft_ a1_2.png','draft_ a1_3.png','draft_ a1_4.png','draft_ a1_tp.png'],
+    titles: ['시안 1','시안 2','시안 3','시안 4','시안 5','번외 시안 · 태블릿 세로'] },
+  { id: 'b', no: '03', label: 'Concept B',
+    desc: '네이비 사이드바와 블루 액센트 조합. 필터 영역을 접고 펼 수 있는 구조로 테이블 가시 영역을 넓혔습니다.',
+    files: ['draft_ b1_1.png','draft_ b1_2.png','draft_ b1_3.png','draft_ b1_4.png'],
+    titles: ['시안 1','시안 2','시안 3','시안 4'] },
+  { id: 'ab', no: '04', label: 'Concept A+B',
+    desc: 'A안의 그린 액센트와 B안의 레이아웃 구조를 결합한 절충안입니다.',
+    files: ['draft_ anb1_1.png','draft_ anb1_2.png','draft_ anb1_3.png','draft_ anb1_4.png'],
+    titles: ['시안 1','시안 2','시안 3','시안 4'] },
+  { id: 'c', no: '05', label: 'Concept C',
+    desc: '라운드 카드 프레임과 여백을 강조한 레이아웃 실험입니다.',
+    files: ['draft_ c1_1.png','draft_ c1_2.png'],
+    titles: ['시안 1','시안 2'] },
+  { id: 'd', no: '06', label: 'Concept D',
+    desc: '필터를 좌측 패널로 분리해 조회 조건과 결과를 나란히 두는 구조입니다.',
+    files: ['draft_ c1_3.png'],
+    titles: ['시안 1'] }
+];
+
+class Component extends DCLogic {
+  state = { tab: 0, lb: -1, hover: -1, fade: 1 };
+
+  componentDidMount() {
+    this._key = e => {
+      if (this.state.lb < 0) return;
+      if (e.key === 'Escape') this.close();
+      else if (e.key === 'ArrowRight') { e.preventDefault(); this.step(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); this.step(-1); }
+    };
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this._key);
+    document.body.style.overflow = '';
+  }
+  componentDidUpdate(_, prev) {
+    if ((prev.lb < 0) !== (this.state.lb < 0)) document.body.style.overflow = this.state.lb < 0 ? '' : 'hidden';
+  }
+
+  files(i) { return TABS[i].files; }
+  close() { this.setState({ lb: -1 }); }
+  step(d) {
+    const n = this.files(this.state.tab).length;
+    this.setState(s => ({ lb: (s.lb + d + n) % n }));
+  }
+  selectTab(i) {
+    if (i === this.state.tab) return;
+    this.setState({ fade: 0 });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ tab: i, lb: -1, hover: -1, fade: 1 }), 170);
+  }
+
+  renderVals() {
+    const accent = this.props.accent || '#0066FF';
+    const cols = this.props.columns || 2;
+    const spheresOn = this.props.showSpheres !== false;
+    const { tab, lb, hover, fade } = this.state;
+    const t = TABS[tab];
+
+    const tabs = TABS.map((x, i) => {
+      const on = i === tab;
+      const key = !!x.star;
+      return {
+        no: x.no, label: x.label, count: x.files.length, isKey: key,
+        onSelect: () => this.selectTab(i),
+        btnStyle: 'display:flex;align-items:center;gap:10px;padding:' + (key ? '14px 16px' : '20px 2px 18px') + ';margin:' + (key ? '10px 8px 10px 0' : '0') + ';border:' + (key ? '1px solid ' + (on ? accent : 'rgba(0,102,255,.28)') : '0') + ';border-radius:' + (key ? '999px' : '0') + ';background:' + (key ? (on ? accent : 'rgba(0,102,255,.06)') : 'none') + ';cursor:pointer;font-family:inherit;white-space:nowrap;' + (key ? '' : 'border-bottom:2px solid ' + (on ? accent : 'transparent') + ';') + 'transition:all .22s cubic-bezier(.4,0,.2,1);opacity:' + (on || key ? 1 : .58),
+        numStyle: key ? 'display:none' : 'font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;color:' + (on ? accent : 'rgba(55,56,60,.4)'),
+        dotStyle: key ? 'width:6px;height:6px;border-radius:50%;background:' + (on ? '#fff' : accent) : 'display:none',
+        labelStyle: 'font-size:' + (key ? '14px' : '14px') + ';font-weight:' + (key || on ? 600 : 500) + ';letter-spacing:-.01em;color:' + (key ? (on ? '#fff' : accent) : on ? '#171719' : 'rgba(55,56,60,.75)'),
+        countStyle: 'font-size:10px;font-weight:600;padding:2px 7px;border-radius:999px;background:' + (key ? (on ? 'rgba(255,255,255,.22)' : 'rgba(0,102,255,.12)') : on ? 'rgba(0,102,255,.09)' : 'rgba(112,115,124,.1)') + ';color:' + (key ? (on ? '#fff' : accent) : on ? accent : 'rgba(55,56,60,.5)')
+      };
+    });
+
+    const items = t.files.map((f, i) => {
+      const isTab = /_tp\.png$/.test(f);
+      const hov = hover === i;
+      const role = t.roles ? t.roles[i] : '';
+      const isMain = role === 'main';
+      const isSub = role === 'sub';
+      return {
+        src: F(f),
+        title: t.titles[i] || ('시안 ' + (i + 1)),
+        tag: t.tags ? t.tags[i] : '',
+        hasTag: !!(t.tags && t.tags[i]),
+        note: t.notes ? t.notes[i] : '',
+        hasNote: !!(t.notes && t.notes[i]),
+        tagStyle: 'display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.08em;white-space:nowrap;' + (isMain
+          ? 'background:' + accent + ';color:#fff'
+          : 'background:rgba(112,115,124,.1);color:rgba(55,56,60,.61)'),
+        noteStyle: 'margin:10px 0 0 34px;max-width:52ch;font-size:13px;line-height:1.68;color:rgba(55,56,60,' + (isMain ? '.72' : '.55') + ')',
+        titleStyle: 'flex:1;font-size:' + (isMain ? '15px' : '14px') + ';font-weight:' + (isMain ? 600 : 500) + ';letter-spacing:-.01em;color:' + (isSub ? 'rgba(55,56,60,.75)' : '#171719'),
+        num: String(i + 1).padStart(2, '0'),
+        dims: isTab ? '800 × 1280' : '1920 × 1080',
+        onOpen: () => this.setState({ lb: i }),
+        onEnter: () => this.setState({ hover: i }),
+        onLeave: () => this.setState({ hover: -1 }),
+        cardStyle: 'margin:0;cursor:zoom-in;transition:transform .35s cubic-bezier(.4,0,.2,1);transform:' + (hov ? 'translateY(-4px)' : 'none'),
+        mediaStyle: 'position:relative;overflow:hidden;border-radius:14px;background:#fff;aspect-ratio:' + (isTab ? W.tab : W.r16) + ';border:1px solid ' + (isMain && hov ? accent : 'rgba(112,115,124,' + (hov ? '.34' : '.2') + ')') + ';box-shadow:' + (hov ? '0 30px 60px -24px rgba(60,80,120,.32)' : isMain ? '0 8px 20px -12px rgba(60,80,120,.22)' : '0 2px 6px -2px rgba(60,80,120,.1)') + ';transition:box-shadow .35s cubic-bezier(.4,0,.2,1),border-color .35s',
+        imgStyle: 'display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s cubic-bezier(.4,0,.2,1);transform:scale(' + (hov ? 1.022 : 1) + ')',
+        hoverStyle: 'position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(20,26,38,0) 40%,rgba(20,26,38,.22));opacity:' + (hov ? 1 : 0) + ';transition:opacity .3s ease-out;pointer-events:none'
+      };
+    });
+
+    return {
+      accent, spheresOn, tabs, items,
+      totalCount: TABS.reduce((a, x) => a + x.files.length, 0),
+      current: { no: t.no, label: t.label, desc: t.desc, star: !!t.star, count: t.files.length },
+      gridCols: cols >= 3 ? 'repeat(auto-fill,minmax(min(100%,340px),1fr))'
+              : cols <= 1 ? '1fr'
+              : 'repeat(auto-fill,minmax(min(100%,520px),1fr))',
+      paneStyle: 'opacity:' + fade + ';transform:translateY(' + (fade ? 0 : 10) + 'px);transition:opacity .28s cubic-bezier(.4,0,.2,1),transform .28s cubic-bezier(.4,0,.2,1)',
+      lightboxOpen: lb >= 0,
+      lbSrc: lb >= 0 ? F(t.files[lb]) : '',
+      lbTitle: lb >= 0 ? (t.titles[lb] || '') : '',
+      lbCounter: lb >= 0 ? (lb + 1) + ' / ' + t.files.length : '',
+      closeLightbox: () => this.close(),
+      prev: e => { e.stopPropagation(); this.step(-1); },
+      next: e => { e.stopPropagation(); this.step(1); },
+      stop: e => e.stopPropagation()
+    };
+  }
+}
+
+</script>
+</body>
+</html>
