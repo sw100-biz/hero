@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/wanted-design-system-019e012c-ddde-7919-8039-b806627a851a/colors_and_type.css">
+<script src="_ds/wanted-design-system-019e012c-ddde-7919-8039-b806627a851a/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF;color:#0B0C0E;font-family:Pretendard,"Pretendard JP",-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:#2563EB;text-decoration:none}
+a:hover{color:#1D4ED8}
+img{display:block}
+@keyframes heroFloatA{0%,100%{transform:translate3d(0,0,0) rotate(-1.6deg)}50%{transform:translate3d(0,-16px,0) rotate(-1.6deg)}}
+@keyframes heroFloatB{0%,100%{transform:translate3d(0,-8px,0) rotate(1.8deg)}50%{transform:translate3d(0,10px,0) rotate(1.8deg)}}
+@keyframes cueDrop{0%{opacity:0;transform:translateY(-6px)}40%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+@keyframes softPulse{0%,100%{opacity:.35}50%{opacity:.9}}
+@keyframes orbA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-30px,-46px,0)}}
+@keyframes orbB{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(40px,32px,0)}}
+@keyframes orbC{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-24px,38px,0)}}
+</style>
+</helmet>
+
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:linear-gradient(180deg,#FFFFFF 0%,#FBFCFF 42%,#F7FAFF 100%)">
+  <div style="position:absolute;top:-6%;left:-4%;width:520px;height:520px;border-radius:999px;background:radial-gradient(closest-side,rgba(37,99,235,0.10),rgba(37,99,235,0));animation:orbA 22s ease-in-out infinite"></div>
+  <div style="position:absolute;top:26%;right:-8%;width:660px;height:660px;border-radius:999px;background:radial-gradient(closest-side,rgba(59,111,232,0.09),rgba(59,111,232,0));animation:orbB 28s ease-in-out infinite"></div>
+  <div style="position:absolute;bottom:4%;left:18%;width:380px;height:380px;border-radius:999px;background:radial-gradient(closest-side,rgba(37,99,235,0.07),rgba(37,99,235,0));animation:orbC 24s ease-in-out infinite"></div>
+  <div style="position:absolute;top:58%;left:-6%;width:240px;height:240px;border-radius:999px;background:radial-gradient(closest-side,rgba(0,102,255,0.06),rgba(0,102,255,0));animation:orbB 19s ease-in-out infinite"></div>
+  <div style="position:absolute;top:8%;left:46%;width:180px;height:180px;border-radius:999px;background:radial-gradient(closest-side,rgba(59,111,232,0.07),rgba(59,111,232,0));animation:orbC 17s ease-in-out infinite"></div>
+</div>
+
+<div style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 40px;background:rgba(255,255,255,0.82);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid rgba(112,115,124,0.14)">
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font:700 15px/1 Pretendard;letter-spacing:-0.02em;color:#0B0C0E">HERO</span>
+    <span style="width:1px;height:12px;background:rgba(112,115,124,0.3)"></span>
+    <span style="font:500 12px/1 Pretendard;letter-spacing:.02em;color:rgba(55,56,60,0.61)">Design Review · Feedback Applied</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:28px">
+    <a href="#app" style="font:500 13px/1 Pretendard;color:rgba(55,56,60,0.61)">App</a>
+    <a href="#web" style="font:500 13px/1 Pretendard;color:rgba(55,56,60,0.61)">Web</a>
+    <a href="#detail" style="font:500 13px/1 Pretendard;color:rgba(55,56,60,0.61)">Interaction</a>
+  </div>
+</div>
+
+<section style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px clamp(24px,5vw,80px) 80px;background:radial-gradient(120% 90% at 80% 0%,rgba(232,240,255,0.7) 0%,rgba(232,240,255,0) 60%);overflow:hidden">
+  <div style="position:absolute;top:-160px;right:-120px;width:620px;height:620px;border-radius:999px;background:radial-gradient(closest-side,rgba(37,99,235,0.12),rgba(37,99,235,0));pointer-events:none"></div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;width:100%;display:flex;flex-wrap:wrap;gap:64px;align-items:center">
+    <div style="flex:1 1 400px;min-width:0">
+      <div data-reveal="" style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;border:1px solid rgba(37,99,235,0.22);background:rgba(37,99,235,0.06);border-radius:999px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+        <span style="width:6px;height:6px;border-radius:999px;background:#2563EB;animation:softPulse 2.4s ease-in-out infinite"></span>
+        <span style="font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#2563EB">FEEDBACK APPLIED · 2ND REVIEW</span>
+      </div>
+      <h1 data-reveal="" style="margin:26px 0 0;font:700 clamp(40px,4.4vw,68px)/1.14 Pretendard;letter-spacing:-0.035em;color:#0B0C0E;text-wrap:pretty;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.4,0,.2,1) .06s,transform 1s cubic-bezier(.4,0,.2,1) .06s">HERO App<br>Design Review</h1>
+      <p data-reveal="" style="margin:22px 0 0;max-width:30rem;font:400 17px/1.72 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);text-wrap:pretty;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.4,0,.2,1) .12s,transform 1s cubic-bezier(.4,0,.2,1) .12s">1차 디자인 리뷰 의견을 반영하여 UX 방향을 결정하기 위한 리뷰 시스템입니다. 주문 흐름과 정보 위계를 다시 설계하고, B2B 주문 목적에 맞춘 화면 구조로 정리했습니다.</p>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.4,0,.2,1) .18s,transform 1s cubic-bezier(.4,0,.2,1) .18s">
+        <a href="#app" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;background:#2563EB;color:#fff;font:600 14px/1 Pretendard;letter-spacing:-0.01em;box-shadow:0 10px 24px rgba(37,99,235,0.24);transition:transform .2s cubic-bezier(.4,0,.2,1),background .2s ease-out" style-hover="background:#1D4ED8;color:#fff" style-active="transform:scale(0.98)">리뷰 시작하기</a>
+        <a href="#web" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;background:#fff;border:1px solid rgba(112,115,124,0.22);color:#0B0C0E;font:600 14px/1 Pretendard;letter-spacing:-0.01em;transition:background .2s ease-out" style-hover="background:rgba(37,99,235,0.05);color:#0B0C0E">Web 리뷰 보기</a>
+      </div>
+      <div data-reveal="" style="display:flex;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(112,115,124,0.18);max-width:30rem;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.4,0,.2,1) .24s,transform 1s cubic-bezier(.4,0,.2,1) .24s">
+        <div><div style="font:700 22px/1.2 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">2</div><div style="margin-top:6px;font:500 12.5px/1.4 Pretendard;color:rgba(55,56,60,0.61)">App 방향안 (D1 · E1)</div></div>
+        <div><div style="font:700 22px/1.2 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">4</div><div style="margin-top:6px;font:500 12.5px/1.4 Pretendard;color:rgba(55,56,60,0.61)">핵심 개선 포인트</div></div>
+        <div><div style="font:700 22px/1.2 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">2</div><div style="margin-top:6px;font:500 12.5px/1.4 Pretendard;color:rgba(55,56,60,0.61)">Prototype 링크</div></div>
+      </div>
+    </div>
+    <div style="position:relative;flex:1 1 480px;min-width:0;display:flex;justify-content:center;align-items:flex-end;gap:clamp(12px,2.4vw,28px);min-height:600px">
+      <div data-float="a" style="animation:heroFloatA 7s ease-in-out infinite">
+        <div style="width:clamp(180px,20vw,264px);padding:9px;border-radius:40px;background:linear-gradient(160deg,#1B1D21,#0A0B0D);box-shadow:0 40px 80px -24px rgba(11,24,60,0.34),0 8px 20px rgba(11,24,60,0.12)">
+          <div style="height:470px;border-radius:32px;overflow:hidden;background:#fff"><img src="uploads/draft_final/dtf_a_d1_m1.png" alt="D1 app design" style="width:100%;height:auto"></div>
+        </div>
+        <div style="margin-top:16px;text-align:center;font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:rgba(55,56,60,0.61)">D1</div>
+      </div>
+      <div data-float="b" style="animation:heroFloatB 8.4s ease-in-out infinite">
+        <div style="width:clamp(200px,22vw,296px);padding:10px;border-radius:44px;background:linear-gradient(160deg,#1B1D21,#0A0B0D);box-shadow:0 48px 96px -24px rgba(11,24,60,0.4),0 8px 20px rgba(11,24,60,0.14)">
+          <div style="height:540px;border-radius:35px;overflow:hidden;background:#fff"><img src="uploads/dtf_a_e2_m1.png" alt="E1 app design" style="width:100%;height:auto"></div>
+        </div>
+        <div style="margin-top:16px;text-align:center;font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#2563EB">E1</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;left:50%;bottom:34px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px">
+    <span style="font:500 11px/1 Pretendard;letter-spacing:.16em;color:rgba(55,56,60,0.44)">SCROLL</span>
+    <span style="width:1px;height:34px;background:linear-gradient(180deg,rgba(37,99,235,0.6),rgba(37,99,235,0));animation:cueDrop 2.2s ease-in-out infinite"></span>
+  </div>
+</section>
+
+<section id="app" style="padding:160px 80px 140px;max-width:1440px;margin:0 auto">
+  <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+    <span style="font:600 12px/1 Pretendard;letter-spacing:.14em;color:#2563EB">01</span>
+    <span style="font:500 12px/1 Pretendard;letter-spacing:.14em;color:rgba(55,56,60,0.61)">APP DESIGN OVERVIEW</span>
+  </div>
+  <div data-reveal="" style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,0.9fr);gap:56px;align-items:end;margin-top:28px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .06s,transform .9s cubic-bezier(.4,0,.2,1) .06s">
+    <h2 style="margin:0;font:700 clamp(30px,3vw,46px)/1.24 Pretendard;letter-spacing:-0.03em;color:#0B0C0E;text-wrap:pretty">두 가지 방향으로<br>주문 경험을 다시 정리했습니다</h2>
+    <p style="margin:0;font:400 16px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);text-wrap:pretty">D1은 목록형 반복 주문에, E1은 카드형 탐색과 재주문에 최적화된 구조입니다. 제목을 클릭하면 전체 화면을 확인할 수 있습니다.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:72px;margin-top:96px">
+    <div data-reveal="" style="opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1s cubic-bezier(.4,0,.2,1)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:600 11.5px/1 Pretendard;letter-spacing:.14em;color:rgba(55,56,60,0.44)">DIRECTION</span>
+        <span style="font:700 13px/1 Pretendard;letter-spacing:.02em;color:#0B0C0E">D1</span>
+      </div>
+      <h3 onClick="{{ openD1 }}" style="margin:14px 0 0;display:inline-flex;align-items:center;gap:10px;font:700 28px/1.34 Pretendard;letter-spacing:-0.028em;color:#0B0C0E;cursor:pointer;transition:color .2s ease-out" style-hover="color:#2563EB">최근 주문 중심의 목록형 주문<span style="font:500 13px/1 Pretendard;color:#2563EB">전체 보기 ↗</span></h3>
+      <p style="margin:12px 0 0;max-width:34rem;font:400 15.5px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);text-wrap:pretty">반복 주문 품목을 한 화면에서 선택·수량·담기까지 끝낼 수 있도록 목록 밀도를 높였습니다.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.18);font:600 12px/1 Pretendard;color:#2563EB">전체 선택 · 일괄 담기</span>
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(112,115,124,0.06);border:1px solid rgba(112,115,124,0.18);font:600 12px/1 Pretendard;color:rgba(55,56,60,0.75)">목록 / 그리드 전환</span>
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(112,115,124,0.06);border:1px solid rgba(112,115,124,0.18);font:600 12px/1 Pretendard;color:rgba(55,56,60,0.75)">브랜드 필터</span>
+      </div>
+      <div onClick="{{ openD1 }}" style="margin-top:36px;cursor:zoom-in;border-radius:24px;overflow:hidden;border:1px solid rgba(112,115,124,0.18);background:linear-gradient(180deg,#F7FAFF,#FFFFFF);padding:36px 36px 0;display:flex;justify-content:center;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)" style-hover="box-shadow:0 24px 60px -22px rgba(11,24,60,0.24)">
+        <div style="width:280px;padding:9px 9px 0;border-radius:40px 40px 0 0;background:linear-gradient(160deg,#1B1D21,#0A0B0D)">
+          <div style="height:400px;border-radius:32px 32px 0 0;overflow:hidden;background:#fff"><img src="uploads/draft_final/dtf_a_d1_m1.png" alt="D1 전체 화면" style="width:100%;height:auto"></div>
+        </div>
+      </div>
+      <a href="https://www.figma.com/proto/AI4J2Pwkq5zn9XNbOs1ykn/HERO%EC%95%B1-%EC%9B%B9---%EB%94%94%EC%9E%90%EC%9D%B8?node-id=1504-9661&amp;viewport=-9351%2C29863%2C0.5&amp;t=zGIgcrgFn35nF48U-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=547%3A7087" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:13px 22px;border-radius:999px;border:1px solid rgba(112,115,124,0.22);background:#fff;font:600 13.5px/1 Pretendard;color:#0B0C0E;transition:background .2s ease-out,border-color .2s ease-out" style-hover="background:#2563EB;color:#fff;border-color:#2563EB">D1 프로토타입 열기 ↗</a>
+    </div>
+
+    <div data-reveal="" style="opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.4,0,.2,1) .1s,transform 1s cubic-bezier(.4,0,.2,1) .1s">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font:600 11.5px/1 Pretendard;letter-spacing:.14em;color:rgba(55,56,60,0.44)">DIRECTION</span>
+        <span style="font:700 13px/1 Pretendard;letter-spacing:.02em;color:#2563EB">E1</span>
+      </div>
+      <h3 onClick="{{ openE1 }}" style="margin:14px 0 0;display:inline-flex;align-items:center;gap:10px;font:700 28px/1.34 Pretendard;letter-spacing:-0.028em;color:#0B0C0E;cursor:pointer;transition:color .2s ease-out" style-hover="color:#2563EB">카드형 탐색과 빠른 재주문<span style="font:500 13px/1 Pretendard;color:#2563EB">전체 보기 ↗</span></h3>
+      <p style="margin:12px 0 0;max-width:34rem;font:400 15.5px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);text-wrap:pretty">최근 주문·추천 상품을 카드로 노출하고, 수량 조절만으로 장바구니까지 이어지는 흐름을 만들었습니다.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.18);font:600 12px/1 Pretendard;color:#2563EB">수량 조절 → 장바구니 확인</span>
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(112,115,124,0.06);border:1px solid rgba(112,115,124,0.18);font:600 12px/1 Pretendard;color:rgba(55,56,60,0.75)">즐겨찾기 강조</span>
+        <span style="padding:7px 13px;border-radius:999px;background:rgba(112,115,124,0.06);border:1px solid rgba(112,115,124,0.18);font:600 12px/1 Pretendard;color:rgba(55,56,60,0.75)">AI 주문 진입</span>
+      </div>
+      <div onClick="{{ openE1 }}" style="margin-top:36px;cursor:zoom-in;border-radius:24px;overflow:hidden;border:1px solid rgba(112,115,124,0.18);background:linear-gradient(180deg,#F2F7FF,#FFFFFF);padding:36px 36px 0;display:flex;justify-content:center;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)" style-hover="box-shadow:0 24px 60px -22px rgba(11,24,60,0.24)">
+        <div style="width:280px;padding:9px 9px 0;border-radius:40px 40px 0 0;background:linear-gradient(160deg,#1B1D21,#0A0B0D)">
+          <div style="height:400px;border-radius:32px 32px 0 0;overflow:hidden;background:#fff"><img src="uploads/dtf_a_e2_m1.png" alt="E1 전체 화면" style="width:100%;height:auto"></div>
+        </div>
+      </div>
+      <a href="https://www.figma.com/proto/AI4J2Pwkq5zn9XNbOs1ykn/HERO%EC%95%B1-%EC%9B%B9---%EB%94%94%EC%9E%90%EC%9D%B8?node-id=1640-10336&amp;viewport=-3957%2C13075%2C0.25&amp;t=GR2gcFjX6nFD3oej-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=1640%3A10336&amp;show-proto-sidebar=1&amp;page-id=547%3A7087" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;padding:13px 22px;border-radius:999px;border:1px solid rgba(37,99,235,0.3);background:#2563EB;font:600 13.5px/1 Pretendard;color:#fff;box-shadow:0 10px 24px rgba(37,99,235,0.2);transition:background .2s ease-out" style-hover="background:#1D4ED8;color:#fff">E1 프로토타입 열기 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="web" style="padding:150px 80px;background:#0B0C0E">
+  <div style="max-width:1440px;margin:0 auto">
+    <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+      <span style="font:600 12px/1 Pretendard;letter-spacing:.14em;color:#6EA0FF">02</span>
+      <span style="font:500 12px/1 Pretendard;letter-spacing:.14em;color:rgba(255,255,255,0.56)">WEB DESIGN OVERVIEW</span>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,0.9fr);gap:56px;align-items:end;margin-top:28px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .06s,transform .9s cubic-bezier(.4,0,.2,1) .06s">
+      <h2 style="margin:0;font:700 clamp(30px,3vw,46px)/1.24 Pretendard;letter-spacing:-0.03em;color:#fff;text-wrap:pretty">화이트 사이드바와 블루 액센트로<br>정보 위계를 재정립했습니다</h2>
+      <p style="margin:0;font:400 16px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(255,255,255,0.62);text-wrap:pretty">리뷰 피드백을 반영한 최종 제안 방향입니다. 입력 필드에는 Floating Label 인터랙션을 적용하여 불필요한 라벨 영역을 최소화하고, 제한된 화면에서도 더 많은 정보를 효율적으로 제공하도록 개선했습니다.</p>
+    </div>
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:48px;margin-top:96px;opacity:0;transform:translateY(36px);transition:opacity 1.1s cubic-bezier(.4,0,.2,1),transform 1.1s cubic-bezier(.4,0,.2,1)">
+      <div style="flex:1 1 720px;max-width:960px">
+        <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.14);background:#151719;box-shadow:0 48px 100px -30px rgba(0,0,0,0.7)">
+          <div style="display:flex;align-items:center;gap:8px;padding:12px 16px;background:#1E2124">
+            <span style="width:10px;height:10px;border-radius:999px;background:#FF5F57"></span>
+            <span style="width:10px;height:10px;border-radius:999px;background:#FFBD2E"></span>
+            <span style="width:10px;height:10px;border-radius:999px;background:#28C840"></span>
+            <span style="margin-left:14px;padding:5px 14px;border-radius:6px;background:rgba(255,255,255,0.08);font:500 11.5px/1 Pretendard;color:rgba(255,255,255,0.6)">hero-admin · 표준 품목 수동 매핑</span>
+          </div>
+          <img onClick="{{ openW1 }}" src="uploads/draft_final/dtf_w_d1_p1.png" alt="Desktop 1920" style="width:100%;height:auto;cursor:zoom-in">
+        </div>
+        <div style="margin-top:20px;display:flex;align-items:baseline;gap:12px">
+          <span style="font:700 14px/1 Pretendard;color:#fff">Desktop</span>
+          <span style="font:400 12.5px/1 Pretendard;color:rgba(255,255,255,0.5)">1920 · 사이드바 + 탭 + 데이터 그리드</span>
+        </div>
+      </div>
+      <div style="flex:0 1 380px">
+        <div style="border-radius:20px;padding:12px;background:linear-gradient(160deg,#2A2D31,#131517);box-shadow:0 40px 80px -30px rgba(0,0,0,0.7)">
+          <div style="border-radius:10px;overflow:hidden;background:#fff"><img onClick="{{ openW2 }}" src="uploads/draft_final/dtf_w_d1_p4.png" alt="Tablet" style="width:100%;height:auto;cursor:zoom-in"></div>
+        </div>
+        <div style="margin-top:20px;display:flex;align-items:baseline;gap:12px">
+          <span style="font:700 14px/1 Pretendard;color:#fff">Tablet</span>
+          <span style="font:400 12.5px/1 Pretendard;color:rgba(255,255,255,0.5)">대시보드 · 앱 사용 분석</span>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;margin-top:110px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.12);border-radius:16px;overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1s cubic-bezier(.4,0,.2,1)">
+      <sc-for list="{{ webNotes }}" as="n" hint-placeholder-count="3">
+        <div style="padding:36px 32px;background:#0B0C0E">
+          <div style="font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#6EA0FF">{{ n.tag }}</div>
+          <div style="margin-top:16px;font:700 18px/1.5 Pretendard;letter-spacing:-0.02em;color:#fff">{{ n.title }}</div>
+          <div style="margin-top:10px;font:400 14px/1.72 Pretendard;color:rgba(255,255,255,0.58);text-wrap:pretty">{{ n.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="detail" style="padding:150px 80px 160px;max-width:1440px;margin:0 auto">
+  <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+    <span style="font:600 12px/1 Pretendard;letter-spacing:.14em;color:#3B6FE8">03</span>
+    <span style="font:500 12px/1 Pretendard;letter-spacing:.14em;color:rgba(55,56,60,0.61)">DETAIL INTERACTION</span>
+  </div>
+  <h2 data-reveal="" style="margin:26px 0 0;max-width:24ch;font:700 clamp(30px,3vw,46px)/1.24 Pretendard;letter-spacing:-0.03em;color:#0B0C0E;text-wrap:pretty;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .06s,transform .9s cubic-bezier(.4,0,.2,1) .06s">실제로 동작하는 디테일을 확인해 보세요</h2>
+  <p data-reveal="" style="margin:18px 0 0;max-width:34rem;font:400 16px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .1s,transform .9s cubic-bezier(.4,0,.2,1) .1s">아래 요소는 이미지가 아니라 실제 인터랙션입니다. <br>포인트 컬러는 <span style="color: rgb(59, 111, 232); font-weight: 600;">#3B6FE8</span>을 사용합니다.</p>
+
+  <div style="margin-top:72px">
+  <sc-if value="{{ showDemos }}" hint-placeholder-val="{{ true }}">
+  <div data-reveal="" style="margin-top:0;display:grid;grid-template-columns:minmax(300px,1fr) minmax(320px,0.85fr);gap:64px;align-items:center;padding:56px 56px;border-radius:24px;border:1px solid rgba(112,115,124,0.18);background:#FBFCFF;opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1s cubic-bezier(.4,0,.2,1)">
+    <div>
+      <div style="font:600 11.5px/1 Pretendard;letter-spacing:.14em;color:#2563EB">INTERACTION GUIDE · E1</div>
+      <h3 style="margin:18px 0 0;font:700 28px/1.36 Pretendard;letter-spacing:-0.028em;color:#0B0C0E;text-wrap:pretty">수량을 조절하면 하단에 장바구니 확인 영역이 <br>나타납니다</h3>
+      <p style="margin:14px 0 0;max-width:32rem;font:400 15.5px/1.75 Pretendard;letter-spacing:-0.012em;color:rgba(55,56,60,0.61);text-wrap:pretty">별도 페이지 이동 없이 담은 수량과 금액을 즉시 확인할 수 있어, 여러 품목을 이어서 <br>담는 B2B 주문 패턴에 맞습니다. 우측 데모에서 직접 확인해 보세요.</p>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <div style="position:relative;width:300px;border-radius:28px;border:1px solid rgba(112,115,124,0.22);background:#fff;overflow:hidden;box-shadow:0 20px 48px -24px rgba(11,24,60,0.24)">
+        <div style="display:flex;gap:14px;padding:20px">
+          <div style="width:64px;height:80px;border-radius:12px;background:#F2F5FA;display:flex;align-items:center;justify-content:center;font:500 10px/1 Pretendard;color:rgba(55,56,60,0.44)">IMG</div>
+          <div style="flex:1">
+            <div style="font:600 14px/1.5 Pretendard;letter-spacing:-0.015em;color:#0B0C0E">참이슬 후레쉬 360ml</div>
+            <div style="display:flex;gap:6px;margin-top:8px">
+              <span style="padding:4px 8px;border-radius:6px;background:rgba(112,115,124,0.08);font:600 11px/1 Pretendard;color:rgba(55,56,60,0.75)">박스</span>
+              <span style="padding:4px 8px;border-radius:6px;background:rgba(112,115,124,0.08);font:600 11px/1 Pretendard;color:rgba(55,56,60,0.75)">입수 : 30</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0;margin-top:14px;border:1px solid rgba(112,115,124,0.22);border-radius:8px;overflow:hidden;width:120px">
+              <button onClick="{{ dec }}" style="flex:1;height:34px;border:0;background:#fff;font:600 15px/1 Pretendard;color:#0B0C0E;cursor:pointer;transition:background .2s ease-out" style-hover="background:rgba(37,99,235,0.06)">−</button>
+              <span style="width:40px;text-align:center;font:600 14px/1 Pretendard;color:#0B0C0E">{{ qty }}</span>
+              <button onClick="{{ inc }}" style="flex:1;height:34px;border:0;background:#fff;font:600 15px/1 Pretendard;color:#2563EB;cursor:pointer;transition:background .2s ease-out" style-hover="background:rgba(37,99,235,0.06)">+</button>
+            </div>
+          </div>
+        </div>
+        <div style="{{ cartBarStyle }}">
+          <div>
+            <div style="font:500 11px/1 Pretendard;color:rgba(255,255,255,0.7)">담은 수량 {{ qty }}박스</div>
+            <div style="margin-top:5px;font:700 15px/1 Pretendard;color:#fff">{{ qtyPrice }}</div>
+          </div>
+          <span style="padding:9px 16px;border-radius:999px;background:#fff;font:600 12.5px/1 Pretendard;color:#2563EB">장바구니 확인</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px;margin-top:80px">
+    <div data-reveal="" style="padding:40px 36px;border-radius:24px;border:1px solid rgba(112,115,124,0.2);background:#fff;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+      <div style="font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#3B6FE8">FLOATING LABEL</div>
+      <div style="margin-top:14px;font:700 20px/1.45 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">라벨 영역을 없애고 입력에 집중</div>
+      <div style="display:flex;flex-direction:column;gap:20px;margin-top:28px">
+        <sc-for list="{{ fields }}" as="f" hint-placeholder-count="3">
+          <label style="position:relative;display:block">
+            <span style="{{ f.labelStyle }}">{{ f.label }}</span>
+            <input value="{{ f.value }}" onChange="{{ f.onChange }}" onFocus="{{ f.onFocus }}" onBlur="{{ f.onBlur }}" style="{{ f.inputStyle }}">
+          </label>
+        </sc-for>
+      </div>
+      <div style="margin-top:22px;font:400 13px/1.7 Pretendard;color:rgba(55,56,60,0.61)">입력 시 라벨이 상단 보더로 이동하여 폼 높이를 약 32% 절감합니다.</div>
+    </div>
+
+    <div data-reveal="" style="padding:40px 36px;border-radius:24px;border:1px solid rgba(112,115,124,0.2);background:#fff;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .06s,transform .9s cubic-bezier(.4,0,.2,1) .06s">
+      <div style="font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#3B6FE8">CHECKBOX · SEARCH FILTER</div>
+      <div style="margin-top:14px;font:700 20px/1.45 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">사업부문 선택과 필터 칩</div>
+      <div style="display:flex;flex-wrap:wrap;gap:18px 26px;margin-top:28px">
+        <sc-for list="{{ checks }}" as="c" hint-placeholder-count="4">
+          <div onClick="{{ c.toggle }}" style="display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none">
+            <span style="{{ c.boxStyle }}">✓</span>
+            <span style="font:500 14px/1 Pretendard;color:#0B0C0E">{{ c.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="height:1px;background:rgba(112,115,124,0.18);margin:30px 0"></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <sc-for list="{{ chips }}" as="ch" hint-placeholder-count="5">
+          <span onClick="{{ ch.select }}" style="{{ ch.style }}">{{ ch.label }}</span>
+        </sc-for>
+      </div>
+      <div style="margin-top:24px;padding:16px 18px;border-radius:12px;background:#F6F8FC;font:500 13px/1.6 Pretendard;color:rgba(55,56,60,0.75)">선택 결과 · {{ filterSummary }}</div>
+    </div>
+
+    <div data-reveal="" style="padding:40px 36px;border-radius:24px;border:1px solid rgba(112,115,124,0.2);background:#fff;opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.4,0,.2,1) .12s,transform .9s cubic-bezier(.4,0,.2,1) .12s">
+      <div style="font:600 11.5px/1 Pretendard;letter-spacing:.12em;color:#3B6FE8">SELECT · ACCORDION</div>
+      <div style="margin-top:14px;font:700 20px/1.45 Pretendard;letter-spacing:-0.024em;color:#0B0C0E">선택과 접힘으로 밀도를 조절</div>
+      <div style="position:relative;margin-top:28px">
+        <div onClick="{{ toggleSel }}" style="{{ selBoxStyle }}">
+          <span style="font:500 14px/1 Pretendard;color:#0B0C0E">{{ selVal }}</span>
+          <span style="{{ selCaretStyle }}">▾</span>
+        </div>
+        <sc-if value="{{ selOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;z-index:20;top:calc(100% + 8px);left:0;right:0;padding:6px;border-radius:12px;background:#fff;border:1px solid rgba(112,115,124,0.2);box-shadow:0 12px 32px -10px rgba(11,24,60,0.24)">
+            <sc-for list="{{ selOptions }}" as="o" hint-placeholder-count="4">
+              <div onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+      <div style="margin-top:28px;border-top:1px solid rgba(112,115,124,0.18)">
+        <sc-for list="{{ accItems }}" as="a" hint-placeholder-count="3">
+          <div style="border-bottom:1px solid rgba(112,115,124,0.18)">
+            <div onClick="{{ a.toggle }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;cursor:pointer;user-select:none">
+              <span style="{{ a.titleStyle }}">{{ a.q }}</span>
+              <span style="{{ a.iconStyle }}">＋</span>
+            </div>
+            <sc-if value="{{ a.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 0 20px;font:400 14px/1.75 Pretendard;color:rgba(55,56,60,0.61);text-wrap:pretty">{{ a.a }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal="" style="margin-top:100px;border-radius:24px;overflow:hidden;border:1px solid rgba(112,115,124,0.2);opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.4,0,.2,1),transform 1s cubic-bezier(.4,0,.2,1)">
+    <img onClick="{{ openW3 }}" src="uploads/draft_final/dtf_w_d1_p3.png" alt="표준 품목 상세 모달" style="width:100%;height:auto;cursor:zoom-in">
+  </div>
+  <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:20px;opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)">
+    <span style="font:500 13px/1.6 Pretendard;color:rgba(55,56,60,0.61)">표준 품목 상세 · Floating Label을 적용한 15개 필드 모달 (클릭하여 확대)</span>
+    
+  </div>
+</section>
+
+<footer style="padding:56px 80px 64px;border-top:1px solid rgba(112,115,124,0.18);background:rgba(255,255,255,0.5)">
+  <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
+    <span style="font:500 12px/1 Pretendard;color:rgba(55,56,60,0.44)">HERO Design Review · Feedback Applied</span>
+    <span style="font:500 12px/1 Pretendard;color:rgba(55,56,60,0.44)">하이트진로 + 비즈데이터 운영주체</span>
+  </div>
+</footer>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLb }}" style="position:fixed;inset:0;z-index:200;background:rgba(8,10,14,0.86);backdrop-filter:blur(6px);overflow:auto;padding:64px 24px;display:flex;justify-content:center;cursor:zoom-out">
+    <div style="max-width:1360px;width:100%">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px">
+        <span style="font:600 13px/1 Pretendard;letter-spacing:.06em;color:#fff">{{ lbTitle }}</span>
+        <span style="padding:9px 16px;border-radius:999px;border:1px solid rgba(255,255,255,0.28);font:600 12px/1 Pretendard;color:#fff">닫기 ESC</span>
+      </div>
+      <img src="{{ lbSrc }}" alt="{{ lbTitle }}" style="{{ lbImgStyle }}">
+    </div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;floatMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;compareStart&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:50,&quot;min&quot;:10,&quot;max&quot;:90,&quot;step&quot;:1,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Before / After&quot;},&quot;showInteractionDemos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = {
+    cmp: 50, lb: null, qty: 1, selOpen: false, selVal: "전체",
+    fv: { a: "", b: "", c: "" }, ff: { a: false, b: false, c: false },
+    chk: { all: false, beer: true, soju: false, wine: false },
+    chip: "맥주", acc: 0
+  };
+
+  componentDidMount() {
+    this.state = Object.assign({}, this.state, { cmp: this.props.compareStart ?? 50 });
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = "1";
+          e.target.style.transform = "translateY(0)";
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    const scan = () => document.querySelectorAll("[data-reveal]").forEach((el) => {
+      if (el.dataset.ioBound) return; el.dataset.ioBound = "1"; io.observe(el);
+    });
+    scan(); [120, 400, 1200].forEach((t) => setTimeout(scan, t));
+    setTimeout(() => document.querySelectorAll("[data-reveal]").forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) { el.style.opacity = "1"; el.style.transform = "translateY(0)"; }
+    }), 1600);
+    if (this.props.floatMotion === false) {
+      document.querySelectorAll("[data-float]").forEach((el) => { el.style.animation = "none"; });
+    }
+    this._key = (e) => { if (e.key === "Escape") this.setState({ lb: null }); };
+    window.addEventListener("keydown", this._key);
+  }
+  componentWillUnmount() { window.removeEventListener("keydown", this._key); }
+
+  _drag(e) {
+    const box = this._box; if (!box) return;
+    const r = box.getBoundingClientRect();
+    const pct = Math.max(2, Math.min(98, ((e.clientX - r.left) / r.width) * 100));
+    this.setState({ cmp: pct });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const mk = (k, label) => ({
+      key: k, label,
+      value: s.fv[k],
+      onChange: (e) => this.setState({ fv: Object.assign({}, s.fv, { [k]: e.target.value }) }),
+      onFocus: () => this.setState({ ff: Object.assign({}, s.ff, { [k]: true }) }),
+      onBlur: () => this.setState({ ff: Object.assign({}, s.ff, { [k]: false }) }),
+      labelStyle: (s.ff[k] || s.fv[k])
+        ? { position: "absolute", top: "-8px", left: "12px", padding: "0 6px", background: "#fff", font: "500 11.5px/1 Pretendard", letterSpacing: "-0.01em", color: s.ff[k] ? "#3B6FE8" : "rgba(55,56,60,0.61)", transition: "all .2s cubic-bezier(0.4,0,0.2,1)", pointerEvents: "none" }
+        : { position: "absolute", top: "50%", left: "16px", transform: "translateY(-50%)", padding: "0", background: "transparent", font: "400 14px/1 Pretendard", color: "rgba(55,56,60,0.44)", transition: "all .2s cubic-bezier(0.4,0,0.2,1)", pointerEvents: "none" },
+      inputStyle: { width: "100%", height: "52px", padding: "0 16px", borderRadius: "8px", border: s.ff[k] ? "1.5px solid #3B6FE8" : "1px solid rgba(112,115,124,0.22)", outline: "none", background: "#fff", font: "500 14px/1 Pretendard", color: "#0B0C0E", boxShadow: s.ff[k] ? "0 0 0 3px rgba(59,111,232,0.12)" : "none", transition: "border-color .2s ease-out, box-shadow .2s ease-out" }
+    });
+    const chipStyle = (on) => ({ padding: "8px 14px", borderRadius: "999px", cursor: "pointer", userSelect: "none", font: "600 12.5px/1 Pretendard", background: on ? "#3B6FE8" : "rgba(112,115,124,0.07)", color: on ? "#fff" : "rgba(55,56,60,0.75)", border: on ? "1px solid #3B6FE8" : "1px solid rgba(112,115,124,0.16)", transition: "all .2s cubic-bezier(0.4,0,0.2,1)" });
+    const boxStyle = (on) => ({ width: "20px", height: "20px", borderRadius: "5px", display: "flex", alignItems: "center", justifyContent: "center", font: "700 11px/1 Pretendard", background: on ? "#3B6FE8" : "#fff", color: on ? "#fff" : "transparent", border: on ? "1.5px solid #3B6FE8" : "1.5px solid rgba(112,115,124,0.32)", transition: "all .18s cubic-bezier(0.4,0,0.2,1)" });
+    const chkDefs = [["all", "전체"], ["beer", "맥주"], ["soju", "소주"], ["wine", "와인"]];
+    const chipDefs = ["맥주", "소주", "수입맥주", "수입위스키", "무알콜"];
+    const accDefs = [
+      ["Floating Label을 왜 적용했나요?", "라벨 전용 행을 제거해 한 화면에 노출되는 필드 수를 늘렸습니다. 15개 필드 모달에서 세로 높이가 약 32% 줄어듭니다."],
+      ["기존 검색 영역과 다른 점은?", "검색 영역은 접기/펼치기로 전환되며, 접힌 상태에서는 통합 검색 한 줄만 남겨 그리드 영역을 최대로 확보합니다."],
+      ["그리드의 강조 규칙은?", "품목코드는 식별 강조, 품명은 링크 강조로 구분했고 편집 가능한 열만 연한 배경으로 구분했습니다."]
+    ];
+    const lb = s.lb;
+    const shots = {
+      d1: ["uploads/draft_final/dtf_a_d1_m1.png", "D1 · 목록형 주문 전체 화면", 390],
+      e1: ["uploads/dtf_a_e2_m1.png", "E1 · 카드형 재주문 전체 화면", 390],
+      w1: ["uploads/draft_final/dtf_w_d1_p1.png", "Web · 표준 품목 수동 매핑 (Desktop)", 1600],
+      w2: ["uploads/draft_final/dtf_w_d1_p4.png", "Web · 대시보드 앱 사용 분석", 1600],
+      w3: ["uploads/draft_final/dtf_w_d1_p3.png", "Web · 표준 품목 상세 모달", 1600]
+    };
+    const cur = lb ? shots[lb] : null;
+    const open = (k) => () => this.setState({ lb: k });
+
+    return {
+      points: [
+        { no: "01", title: "주문 흐름 단순화", body: "선택 → 수량 → 담기를 한 화면에서 끝내도록 단계를 줄였습니다. 재주문은 최대 2탭." },
+        { no: "02", title: "정보 우선순위 재정렬", body: "브랜드·입수·용도 배지를 품명 직하단으로 이동해 주문 판단에 필요한 정보만 먼저 보이게 했습니다." },
+        { no: "03", title: "가독성 개선", body: "큰 글씨 모드, 15px 본문, 1.5 행간을 기준으로 매장 환경에서도 읽히는 대비를 확보했습니다." },
+        { no: "04", title: "B2B 주문 목적 UX", body: "박스 단위·미지급금·정산 진입을 상시 노출해 사업자 사용자의 실제 업무 순서를 따릅니다." }
+      ],
+      webNotes: [
+        { tag: "SIDEBAR", title: "화이트 사이드바", body: "다크 네비게이션을 화이트로 전환하고 현재 위치만 블루로 강조해 깊은 메뉴 구조에서도 경로가 보입니다." },
+        { tag: "ACCENT", title: "블루 액센트 최소 사용", body: "저장·조회 등 실행 액션과 활성 상태에만 블루를 사용하고, 나머지는 뉴트럴 헤어라인으로 정리했습니다." },
+        { tag: "DENSITY", title: "그리드 우선 밀도", body: "검색 영역은 접힘 가능하게 하고 268행 기준 스크롤 성능과 열 고정 규칙을 함께 정의했습니다." }
+      ],
+      cmpClipStyle: { position: "absolute", top: 0, left: 0, bottom: 0, width: s.cmp + "%", overflow: "hidden", background: "#fff" },
+      cmpHandleStyle: { position: "absolute", top: 0, bottom: 0, left: s.cmp + "%", width: "2px", background: "#fff", boxShadow: "0 0 0 1px rgba(37,99,235,0.35)", transform: "translateX(-1px)" },
+      onCmpDown: (e) => {
+        this._box = e.currentTarget;
+        this._drag(e);
+        const mv = (ev) => this._drag(ev);
+        const up = () => { window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); };
+        window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+      },
+      showDemos: this.props.showInteractionDemos ?? true,
+      qty: s.qty,
+      qtyPrice: (s.qty * 48000).toLocaleString() + "원",
+      inc: () => this.setState({ qty: s.qty + 1 }),
+      dec: () => this.setState({ qty: Math.max(0, s.qty - 1) }),
+      cartBarStyle: {
+        display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px",
+        padding: s.qty > 0 ? "16px 18px" : "0 18px", background: "#2563EB",
+        maxHeight: s.qty > 0 ? "84px" : "0px", opacity: s.qty > 0 ? 1 : 0, overflow: "hidden",
+        transition: "all .28s cubic-bezier(0.4,0,0.2,1)"
+      },
+      fields: [mk("a", "품명"), mk("b", "브랜드명 / 코드"), mk("c", "용량 (ml)")],
+      checks: chkDefs.map(([k, label]) => ({ key: k, label, boxStyle: boxStyle(s.chk[k]), toggle: () => this.setState({ chk: Object.assign({}, s.chk, { [k]: !s.chk[k] }) }) })),
+      chips: chipDefs.map((label) => ({ label, style: chipStyle(s.chip === label), select: () => this.setState({ chip: label }) })),
+      filterSummary: chkDefs.filter(([k]) => s.chk[k]).map(([, l]) => l).join(" · ") || "선택 없음",
+      selOpen: s.selOpen,
+      selVal: s.selVal,
+      toggleSel: () => this.setState({ selOpen: !s.selOpen }),
+      selBoxStyle: { display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px", height: "52px", padding: "0 16px", borderRadius: "8px", cursor: "pointer", userSelect: "none", background: "#fff", border: s.selOpen ? "1.5px solid #3B6FE8" : "1px solid rgba(112,115,124,0.22)", boxShadow: s.selOpen ? "0 0 0 3px rgba(59,111,232,0.12)" : "none", transition: "all .2s ease-out" },
+      selCaretStyle: { font: "600 12px/1 Pretendard", color: "#3B6FE8", transform: s.selOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform .2s cubic-bezier(0.4,0,0.2,1)" },
+      selOptions: ["전체", "유흥용", "가정용", "공용"].map((label) => ({
+        label,
+        pick: () => this.setState({ selVal: label, selOpen: false }),
+        style: { padding: "12px 14px", borderRadius: "8px", cursor: "pointer", font: "500 13.5px/1 Pretendard", color: s.selVal === label ? "#3B6FE8" : "#0B0C0E", background: s.selVal === label ? "rgba(59,111,232,0.08)" : "transparent" }
+      })),
+      accItems: accDefs.map(([q, a], i) => ({
+        q, a, open: s.acc === i,
+        toggle: () => this.setState({ acc: s.acc === i ? -1 : i }),
+        titleStyle: { font: "600 15px/1.5 Pretendard", letterSpacing: "-0.018em", color: s.acc === i ? "#3B6FE8" : "#0B0C0E", transition: "color .2s ease-out" },
+        iconStyle: { font: "500 15px/1 Pretendard", color: s.acc === i ? "#3B6FE8" : "rgba(55,56,60,0.44)", transform: s.acc === i ? "rotate(45deg)" : "rotate(0deg)", transition: "transform .24s cubic-bezier(0.4,0,0.2,1), color .2s ease-out" }
+      })),
+      openD1: open("d1"), openE1: open("e1"), openW1: open("w1"), openW2: open("w2"), openW3: open("w3"),
+      lbOpen: !!lb,
+      lbSrc: cur ? cur[0] : "",
+      lbTitle: cur ? cur[1] : "",
+      lbImgStyle: { width: "100%", maxWidth: cur ? cur[2] + "px" : "100%", height: "auto", margin: "0 auto", borderRadius: cur && cur[2] === 390 ? "28px" : "12px", boxShadow: "0 30px 80px -20px rgba(0,0,0,0.6)", background: "#fff" },
+      closeLb: () => this.setState({ lb: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
